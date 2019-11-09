@@ -1,0 +1,144 @@
+/* CSS files add styling rules to your content */
+@font-face {
+  font-family: 'Roobert';
+  src: url('https://tiny-cdn.s3-us-west-1.amazonaws.com/Roobert-Medium.otf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Roobert';
+  src: url('https://tiny-cdn.s3-us-west-1.amazonaws.com/Roobert-Bold.otf');
+  font-weight: bold;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.chrome {
+  margin-top: 20px;
+  width: 50px;
+  height: 50px;
+}
+
+.center {
+  display: block;
+  margin: 0 auto;
+}
+
+.header {
+  font-family: 'Roobert', system-ui, helvetica, arial, sans-serif;
+  padding: 2em;
+  height: 50vh;
+  margin-bottom: 100px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+/*   background: #70bg32;
+  background-repeat:no-repeat;
+  background-image: radial-gradient(
+    #350899, #17026A
+  ); */
+}
+
+.mid {
+  margin-top: 100px;
+  width: 50%;
+}
+
+.footer {
+  font-family: 'Roobert', system-ui, helvetica, arial, sans-serif;
+  padding: 2em;
+}
+
+.illustration {
+  margin-top: 75px;
+  height: 300px;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 65px;
+  color: #423CDE;
+  opacity: 0.8;
+   -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: #423CDE;
+}
+
+h2 {
+  font-weight: 800;
+  font-size: 24px;
+  font-family: system-ui, helvetica, arial, sans-serif;
+  margin-top: 40px;
+  color: #fff;
+  opacity: 0.8;
+  width: 500px;
+  padding: 15px;
+  background-color: #423CDE;
+}
+
+h3 {
+  font-weight: 800;
+  margin-top: -60px;
+  margin-bottom: 10px;
+  background-color: #111;
+  color: #FFF;
+  padding: 5px 10px;
+  position: absolute;
+}
+
+p {
+  letter-spacing: 0.5px;
+}
+
+input { 
+  outline: none;
+  border: none;
+  border: 2px solid black;
+  font-size: 20px;
+  margin-top: 75px;
+  padding: 10px 20px;
+/*   border-radius: 4px; */
+  font-family: 'Roobert', system-ui, helvetica, arial, sans-serif;
+}
+
+button {
+  outline: none;
+  font-family: 'Roobert', system-ui, helvetica, arial, sans-serif;
+  border: none;
+  border: 2px solid black;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  margin-top: 50px;
+  padding: 10px 20px;
+/*   border-radius: 4px; */
+  cursor: pointer;
+  transition: .2s;
+}
+
+button:hover{
+  transition: .2s;
+  border: 2px solid #444;
+  background-color: #444;
+}
+
+.pulsate {
+    -webkit-animation: pulsate 1.5s ease-out;
+    -webkit-animation-iteration-count: infinite; 
+    opacity: 0.5;
+}
+
+@-webkit-keyframes pulsate {
+    0% { 
+        opacity: 0.5;
+    }
+    50% { 
+        opacity: 1.0;
+    }
+    100% { 
+        opacity: 0.5;
+    }
+}
