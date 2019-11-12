@@ -142,7 +142,7 @@ input {
   font-family: 'Roobert', system-ui, helvetica, arial, sans-serif;
 }
 
-button {
+.button {
   outline: none;
   font-family: 'Roobert', system-ui, helvetica, arial, sans-serif;
   border: none;
