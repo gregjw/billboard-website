@@ -31,7 +31,7 @@
   font-family: 'Roobert', system-ui, helvetica, arial, sans-serif;
   padding: 2em;
   height: 50vh;
-  margin-bottom: 100px;
+  margin-bottom: 200px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -44,7 +44,7 @@
 }
 
 .mid {
-  margin-top: 100px;
+  margin-top: 50px;
   width: 50%;
 }
 
@@ -60,24 +60,62 @@
 
 h1 {
   font-weight: 800;
-  font-size: 65px;
+  font-size: 55pt;
   color: #423CDE;
   opacity: 0.8;
-   -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-width: 3px;
    -webkit-text-stroke-color: #423CDE;
+  padding-left: -10px;
+  padding-bottom: 80px;
+  width: 300px;
+  font-family: system-ui, helvetica, arial, sans-serif;
+  display: inline;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  animation: animatedBackground 1.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s forwards;
+  z-index: 0;
+}
+
+.white {
+  font-size: 5pt;
+  z-index: -1;
+  color: black;
+  position: absolute;
+  margin-top: 40px;
+  width: 310px;
+  padding-bottom: 70px;
+  margin-left: -310px;
+  -webkit-text-stroke-width: 3px;
+   -webkit-text-stroke-color: #FFF;
+  background-image: linear-gradient(
+      transparent 50%,
+      #AD50FF 50%,
+      #AD50FF 85%,
+      transparent 85%,
+      transparent 100%
+  );
+/*   opacity: 0; */
+}
+
+@keyframes animatedBackground {
+    to {
+        background-size: 100% 100%;
+    }
 }
 
 h2 {
   font-weight: 800;
   font-size: 24px;
   font-family: system-ui, helvetica, arial, sans-serif;
-  margin-top: 40px;
+  margin-top: 100px;
   color: #fff;
   opacity: 0.8;
   width: 500px;
   padding: 15px;
+  border-radius: 5px;
   background-color: #423CDE;
 }
+
 
 h3 {
   font-weight: 800;
@@ -97,7 +135,7 @@ input {
   outline: none;
   border: none;
   border: 2px solid black;
-  font-size: 20px;
+  font-size: 22px;
   margin-top: 75px;
   padding: 10px 20px;
 /*   border-radius: 4px; */
@@ -111,8 +149,8 @@ button {
   border: 2px solid black;
   background-color: black;
   color: white;
-  font-size: 20px;
-  margin-top: 50px;
+  font-size: 22px;
+  margin-top: 10px;
   padding: 10px 20px;
 /*   border-radius: 4px; */
   cursor: pointer;
@@ -141,4 +179,24 @@ button:hover{
     100% { 
         opacity: 0.5;
     }
+}
+
+
+@media only screen and (max-width: 700px) {
+  .mid {
+    width: 95%;
+    margin-top: 20px;
+  }
+  
+  h1 {
+    font-size: 45pt;
+  }
+  
+  h2 {
+    width: 400px;
+  }
+  
+  button {
+    margin-top: 5px;
+  }
 }
