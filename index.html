@@ -13,16 +13,15 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'UA-135271340-3');
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>  
   <body>
     <div class="header">
       <div class="mid center">
         <h1>Billboard</h1>
-        <h1 class="white">Billboard</h1>
+        <div class="underline"></div>
         <h2 id="gradient">
           We're flipping advertising on its head by paying you for seeing the advertising.
         </h2>
@@ -30,7 +29,7 @@
           <form action="https://made.us3.list-manage.com/subscribe/post?u=2a1d178e9de24d453ea6b042c&amp;id=8a4dddb52e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
             <div id="mc_embed_signup_scroll">
               <div class="mc-field-group">
-                <input type="email" value="your@email.com" name="EMAIL" class="required email" id="mce-EMAIL">
+                <input type="email" placeholder="your@email.com" name="EMAIL" class="required email" id="mce-EMAIL">
                 <input type="submit" value="Join the waiting list" name="subscribe" id="mc-embedded-subscribe" class="button"/>
               </div>
               <div id="mce-responses" class="clear">
@@ -91,14 +90,5 @@
     <div class="footer">
       
     </div>
-    <script>
-      $(function() {
-        $("#bbForm").submit(function(e) {
-          e.preventDefault();
-          location.reload();
-          return false;
-        })
-      });
-    </script>
   </body>
 </html>

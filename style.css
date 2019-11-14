@@ -76,25 +76,40 @@ h1 {
   z-index: 0;
 }
 
-.white {
-  font-size: 5pt;
+.underline {
   z-index: -1;
-  color: black;
   position: absolute;
-  margin-top: 40px;
+  margin-top: -8px;
+  display: block;
   width: 310px;
-  padding-bottom: 70px;
-  margin-left: -310px;
-  -webkit-text-stroke-width: 3px;
-   -webkit-text-stroke-color: #FFF;
-  background-image: linear-gradient(
-      transparent 50%,
-      #AD50FF 50%,
-      #AD50FF 85%,
-      transparent 85%,
-      transparent 100%
-  );
-/*   opacity: 0; */
+  height: 28px;
+  margin-left: 2px;
+  background-color: #BF76FF;
+  cursor: pointer;
+  transform-origin: 0% 100%;
+  -webkit-animation: bummer 2s;
+    animation: bummer 2s;
+    -webkit-transform: scale(0,1); 
+    transform: scale(0,1);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards; /* Add this so that your modal doesn't 
+                                      close after the animation completes */
+}
+
+@-webkit-keyframes bummer {
+    100% {
+        -webkit-transform: scale(1,1); 
+    }
+}
+
+@keyframes bummer {
+    100% {
+        transform: scale(1,1); 
+    }
+}
+
+.underline:hover {
+  opacity: 0.6;
 }
 
 @keyframes animatedBackground {
@@ -114,6 +129,10 @@ h2 {
   padding: 15px;
   border-radius: 5px;
   background-color: #423CDE;
+}
+
+.slow { 
+  animation-duration: 0.15s;
 }
 
 
