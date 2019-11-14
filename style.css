@@ -81,7 +81,7 @@ h1 {
   position: absolute;
   margin-top: -8px;
   display: block;
-  width: 310px;
+  width: 308px;
   height: 28px;
   margin-left: 2px;
   background-color: #BF76FF;
@@ -208,7 +208,11 @@ button:hover{
   }
   
   h1 {
-    font-size: 45pt;
+    font-size: 50pt;
+  }
+  
+  .underline {
+    width: 282px;
   }
   
   h2 {
