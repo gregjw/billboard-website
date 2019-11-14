@@ -3,17 +3,20 @@
   font-family: 'Roobert';
   src: url('https://tiny-cdn.s3-us-west-1.amazonaws.com/Roobert-Medium.otf');
   font-weight: normal;
+  font-display: fallback;
 }
 
 @font-face {
   font-family: 'Roobert';
   src: url('https://tiny-cdn.s3-us-west-1.amazonaws.com/Roobert-Bold.otf');
   font-weight: bold;
+  font-display: fallback;
 }
 
 * {
   margin: 0;
   padding: 0;
+  font-display: fallback;
 }
 
 .chrome {
@@ -56,6 +59,11 @@
 .illustration {
   margin-top: 75px;
   height: 300px;
+}
+
+label {
+  position: absolute;
+  opacity: 0;
 }
 
 h1 {
