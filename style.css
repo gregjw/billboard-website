@@ -184,7 +184,7 @@ input {
   transition: .2s;
 }
 
-button:hover{
+.button:hover{
   transition: .2s;
   border: 2px solid #444;
   background-color: #444;
@@ -209,10 +209,14 @@ button:hover{
 }
 
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 750px) {
   .mid {
     width: 95%;
     margin-top: 20px;
+  }
+  
+  .header {
+    margin-bottom: 350px;
   }
   
   h1 {
@@ -227,7 +231,9 @@ button:hover{
     width: 400px;
   }
   
-  button {
+  .button {
     margin-top: 5px;
   }
+  
+  
 }
