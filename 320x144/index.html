@@ -65,20 +65,22 @@
         right: 20px;
         border-radius: 15px;
         transition: .2s;
+        opacity: 0.6;
       }
       
       .footer:hover {
         transition: .2s;
-        bottom: 20px;
+        opacity: 1;
+/*         bottom: 20px;
         right: 20px;
         width: 24px;
-        height: 24px;
+        height: 24px; */
       }
     </style>
     <script>
       var urlParams = new URLSearchParams(window.location.search);
       if(urlParams.has('key')){
-        fetch('https://api.tiny.markets/textad/' + urlParams.get('key'))
+        fetch('https://api.tiny.markets/ad/' + urlParams.get('key'))
         .then(
           function(response) {
             if (response.status !== 200) {
@@ -88,9 +90,18 @@
             }
 
             response.json().then(function(data) {
-              document.getElementById("anchor").href = data.link;
-              document.getElementById("title").innerHTML = data.title;
-              document.getElementById("subtitle").innerHTML = data.subtitle;
+              if(data.image){
+                var element = document.getElementById("text-ad");
+                element.parentNode.removeChild(element);
+                document.getElementById("image-anchor").href = data.link;
+                document.getElementById("image").src = data.image;
+              } else {
+                var element = document.getElementById("image-ad");
+                element.parentNode.removeChild(element);
+                document.getElementById("text-anchor").href = data.link;
+                document.getElementById("title").innerHTML = data.title;
+                document.getElementById("subtitle").innerHTML = data.subtitle; 
+              }
             });
           }
         )
@@ -99,7 +110,7 @@
           document.getElementById("subtitle").innerHTML = '';
         });
       } else {
-        fetch('https://api.tiny.markets/textad/hiwxNeKFc1')
+        fetch('https://api.tiny.markets/ad/hiwxNeKFc1')
         .then(
           function(response) {
             if (response.status !== 200) {
@@ -109,9 +120,18 @@
             }
 
             response.json().then(function(data) {
-              document.getElementById("anchor").href = data.link;
-              document.getElementById("title").innerHTML = data.title;
-              document.getElementById("subtitle").innerHTML = data.subtitle;
+              if(data.image){
+                var element = document.getElementById("text-ad");
+                element.parentNode.removeChild(element);
+                document.getElementById("image-anchor").href = data.link;
+                document.getElementById("image").src = data.image;
+              } else {
+                var element = document.getElementById("image-ad");
+                element.parentNode.removeChild(element);
+                document.getElementById("text-anchor").href = data.link;
+                document.getElementById("title").innerHTML = data.title;
+                document.getElementById("subtitle").innerHTML = data.subtitle; 
+              }
             });
           }
         )
@@ -123,24 +143,28 @@
     </script>
   </head>  
   <body>
-<!--     IMAGE -->
-<!--     <a href="https://made.is" class="billboard-link">
-      <img class="billboard-ad" src="https://makerads.xyz/ad/77f4302e1cbf42e6b81453a0e5963809/a" />
-      <a href="https://meetbillboard.glitch.me">
-        <img class="footer" src="https://cdn.glitch.com/2b5f5c56-9acc-45d3-bf3a-92e450e735e8%2Fdot%20(3).png?v=1573548916996" />
+    <div id="text-ad">
+      <a class="billboard-link" id="text-anchor">
+        <p class="title" id="title">
+
+        </p>
+        <p class="subtitle" id="subtitle">
+
+        </p>
+        <a href="https://meetbillboard.com">
+          <img class="footer" src="https://tiny-cdn.s3-us-west-1.amazonaws.com/icon.png" />
+        </a>
+      </a> 
+    </div>
+    <!--     IMAGE -->
+    <div id="image-ad">
+      <a class="billboard-link" id="image-anchor">
+        <img id="image" class="billboard-ad" src="https://i.imgur.com/XHFfvG8.png" />
+        <a href="https://meetbillboard.com">
+          <img class="footer" src="https://tiny-cdn.s3-us-west-1.amazonaws.com/icon.png" />
+        </a>
       </a>
-    </a> -->
+    </div>
 <!--     TEXT -->
-    <a href="https://meetbillboard.com" class="billboard-link" id="anchor">
-      <p class="title" id="title">
-        
-      </p>
-      <p class="subtitle" id="subtitle">
-        
-      </p>
-      <a href="https://meetbillboard.com">
-        <img class="footer" src="https://cdn.glitch.com/2b5f5c56-9acc-45d3-bf3a-92e450e735e8%2Fcircle%20(1).png?v=1573824942926" />
-      </a>
-    </a> 
   </body>
 </html>
