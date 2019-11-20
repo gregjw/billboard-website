@@ -48,7 +48,7 @@
 
 .mid {
   margin-top: 50px;
-  width: 60%;
+  width: 50%;
 }
 
 .footer {
@@ -244,8 +244,17 @@ input {
 
 
 @media only screen and (max-width: 750px) {
+  * {
+    -webkit-appearance: none;
+    overflow-y: none;
+  }
+  
+  .beta-badge {
+    display: none;
+  }
+  
   .mid {
-    width: 95%;
+    width: 100%;
     margin-top: 20px;
   }
   
@@ -258,16 +267,20 @@ input {
   }
   
   .underline {
-    width: 282px;
+    width: 280px;
   }
   
   h2 {
-    width: 400px;
+    width: 90%;
   }
   
   .button {
     margin-top: 5px;
+    border: none;
   }
   
+  img {
+    width: 100%;
+  }
   
 }
