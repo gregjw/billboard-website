@@ -62,14 +62,16 @@
 }
 
 .beta-badge {
-  color: #fff;
-  background-color: #00ffa1;
-  font-weight: 600;
-  border-radius: 4px;
-  padding: 10px;
-  padding-left: 14px;
-  padding-right: 14px;
-  margin-left: 10px;
+  background-color: #fff;
+  color: #111;
+/*   border: 2px solid #fafafa; */
+  box-shadow: 0 0 0 2px rgba(9,9,9,0), 0 6px 15px rgba(18,18,18,.1);
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  font-size: 12px;
+  border-radius: 12px;
+  padding: 0.8rem 1.2rem;
+  margin-left: 20px;
   position: absolute;
   display: inline-block;
 }
@@ -78,7 +80,7 @@
   height: 8px;
   width: 8px;
   border-radius: 4px;
-  box-shadow: 0 0 5px #9ecaed;
+/*   box-shadow: 0 0 5px #9ecaed; */
   margin-top: -3px;
   margin-left: 5px;
   display: inline-block;
