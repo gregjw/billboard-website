@@ -62,15 +62,16 @@
 }
 
 .beta-badge {
-  float: right;
   color: #fff;
-  background-color: #222;
+  background-color: #00ffa1;
   font-weight: 600;
   border-radius: 4px;
   padding: 10px;
   padding-left: 14px;
   padding-right: 14px;
-  display: inline;
+  margin-left: 10px;
+  position: absolute;
+  display: inline-block;
 }
 
 .active {
@@ -84,14 +85,22 @@
   background-color: #00ffa1;
 }
 
-.advertiser-link{
+.link{
+  text-decoration: none;
+  color: black !important;
   cursor: pointer;
   font-family: system-ui, helvetica, arial, sans-serif;
-  font-weight: 600;
+  font-weight: 800;
   float: right;
   margin-top: -5px;
+  margin-left: 10px;
   padding-bottom: 2px;
-  border-bottom: 3px solid black;
+  border-bottom: 5px solid black;
+}
+
+.current {
+  color: #423CDE !important;
+  border-bottom: 5px solid #BF76FF;
 }
 
 label {
@@ -190,6 +199,7 @@ h3 {
 
 p {
   letter-spacing: 0.5px;
+  line-height: 1.25;
 }
 
 input { 
