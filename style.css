@@ -13,6 +13,13 @@
   font-display: fallback;
 }
 
+@font-face {
+  font-family: 'Roobert Heavy';
+  src: url('https://cdn.glitch.com/2b5f5c56-9acc-45d3-bf3a-92e450e735e8%2FRoobert-Heavy.otf?v=1574618208612');
+  font-weight: bold;
+  font-display: fallback;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -34,7 +41,23 @@
   font-family: 'Roobert', system-ui, helvetica, arial, sans-serif;
   padding: 2em;
   height: 50vh;
-  margin-bottom: 200px;
+  margin-bottom: 80px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+/*   background: #70bg32;
+  background-repeat:no-repeat;
+  background-image: radial-gradient(
+    #350899, #17026A
+  ); */
+}
+
+.other-header {
+  font-family: 'Roobert', system-ui, helvetica, arial, sans-serif;
+  padding: 2em;
+  height: 50vh;
+  margin-bottom: 150px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -64,7 +87,6 @@
 .beta-badge {
   background-color: #fff;
   color: #111;
-/*   border: 2px solid #fafafa; */
   box-shadow: 0 0 0 2px rgba(9,9,9,0), 0 6px 15px rgba(18,18,18,.1);
   font-weight: 700;
   letter-spacing: 0.6px;
@@ -80,7 +102,6 @@
   height: 8px;
   width: 8px;
   border-radius: 4px;
-/*   box-shadow: 0 0 5px #9ecaed; */
   margin-top: -3px;
   margin-left: 5px;
   display: inline-block;
@@ -112,15 +133,15 @@ label {
 
 h1 {
   font-weight: 800;
-  font-size: 55pt;
+  font-size: 57pt;
   color: #423CDE;
   opacity: 0.8;
-   -webkit-text-stroke-width: 3px;
+   -webkit-text-stroke-width: 2px;
    -webkit-text-stroke-color: #423CDE;
   padding-left: -10px;
   padding-bottom: 80px;
   width: 300px;
-  font-family: system-ui, helvetica, arial, sans-serif;
+  font-family: 'Roobert Heavy', system-ui, helvetica, arial, sans-serif;
   display: inline;
   background-repeat: no-repeat;
   background-size: 0% 100%;
@@ -148,6 +169,11 @@ h1 {
                                       close after the animation completes */
 }
 
+.sm-underline {
+  color: #423CDE;
+/*   border-bottom: 3px solid #BF76FF; */
+}
+
 @-webkit-keyframes bummer {
     100% {
         -webkit-transform: scale(1,1); 
@@ -172,13 +198,14 @@ h1 {
 
 h2 {
   font-weight: 800;
-  font-size: 24px;
-  font-family: system-ui, helvetica, arial, sans-serif;
-  margin-top: 100px;
+  font-size: 36px;
+  font-family: 'Roobert', system-ui, helvetica, arial, sans-serif;
+  margin-top: 75px;
   color: #fff;
   opacity: 0.8;
   width: 500px;
   padding: 15px;
+  padding-left: 18px;
   border-radius: 5px;
   background-color: #423CDE;
 }
@@ -209,10 +236,16 @@ input {
   border: none;
   border: 2px solid black;
   font-size: 22px;
-  margin-top: 75px;
+  margin-top: 65px;
   padding: 10px 20px;
   border-radius: 4px;
   font-family: system-ui, helvetica, arial, sans-serif;
+}
+
+.mission {
+  font-family: system-ui, helvetica, arial, sans-serif;
+  margin-top: 75px;
+  font-weight: bolder;
 }
 
 .button {
@@ -224,7 +257,7 @@ input {
   color: white;
   font-size: 22px;
   margin-top: 10px;
-  padding: 10px 20px;
+  padding: 10px 30px;
   border-radius: 4px;
   cursor: pointer;
   transition: .2s;
