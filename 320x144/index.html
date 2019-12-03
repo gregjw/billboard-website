@@ -81,7 +81,7 @@
     <script>
       var urlParams = new URLSearchParams(window.location.search);
       if(urlParams.has('key')){
-        fetch('https://api.tiny.markets/ad/' + urlParams.get('key'))
+        fetch('https://api.tiny.markets/chelsea/' + urlParams.get('key'))
         .then(
           function(response) {
             if (response.status !== 200) {
