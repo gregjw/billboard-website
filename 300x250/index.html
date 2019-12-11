@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Billboard - Earn money while you browse the internet</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="https://cdn.glitch.com/2b5f5c56-9acc-45d3-bf3a-92e450e735e8%2F250radius.png?v=1573809284122" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135271340-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-135271340-3');
+    </script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      
+      .billboard-link {
+        display: inline-block;
+        width: 300px;
+        height: 250px;
+        position: relative;
+        text-decoration: none;
+        background-color: #fafafa;
+        margin-bottom: 15px;
+      }
+      
+      .billboard-container {
+        display: block;
+        width: 300px;
+        height: 250px;
+        border-radius: 4px;
+        overflow: hidden;
+      }
+      
+      .title {
+        margin-left: 20px;
+        margin-top: 20px;
+        font-weight: 800;
+        font-size: 18px;
+        font-family: system-ui, helvetica, arial, sans-serif;
+      }
+      
+      .subtitle {
+        font-size: 14px;
+        margin-top: 10px;
+        margin-left: 20px;
+        margin-right: 10px;
+        font-family: system-ui, helvetica, arial, sans-serif;
+        text-decoration: none;
+      }
+      
+      .footer {
+        width: 15px;
+        height: 15px;
+        background-color: black;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        border-radius: 15px;
+        transition: .2s;
+        opacity: 0.6;
+      }
+      
+      .footer:hover {
+        transition: .2s;
+        opacity: 1;
+/*         bottom: 20px;
+        right: 20px;
+        width: 24px;
+        height: 24px; */
+      }
+    </style>
+    <script>
+      var urlParams = new URLSearchParams(window.location.search);
+      if(urlParams.has('key')){
+        fetch('https://api.tiny.markets/network/' + urlParams.get('key'))
+        .then(
+          function(response) {
+            if (response.status !== 200) {
+              console.log('Looks like there was a problem. Status Code: ' +
+                response.status);
+              return;
+            }
+
+            response.json().then(function(data) {
+              if(data.image){
+                var element = document.getElementById("text-container");
+                element.parentNode.removeChild(element);
+                document.getElementById("image-anchor").href = data.link;
+                document.getElementById("image").src = data.image;
+              } else {
+                var element = document.getElementById("image-container");
+                element.parentNode.removeChild(element);
+                document.getElementById("text-anchor").href = data.link;
+                document.getElementById("title").innerHTML = data.title;
+                document.getElementById("subtitle").innerHTML = data.subtitle; 
+              }
+            });
+          }
+        )
+        .catch(function(err) {
+          document.getElementById("title").innerHTML = '';
+          document.getElementById("subtitle").innerHTML = '';
+        });
+      } else {
+        fetch('https://api.tiny.markets/network/hiwxNeKFc1')
+        .then(
+          function(response) {
+            if (response.status !== 200) {
+              console.log('Looks like there was a problem. Status Code: ' +
+                response.status);
+              return;
+            }
+
+            response.json().then(function(data) {
+              if(data.image){
+                var element = document.getElementById("text-container");
+                element.parentNode.removeChild(element);
+                document.getElementById("image-anchor").href = data.link;
+                document.getElementById("image").src = data.image;
+              } else {
+                var element = document.getElementById("image-container");
+                element.parentNode.removeChild(element);
+                document.getElementById("text-anchor").href = data.link;
+                document.getElementById("title").innerHTML = data.title;
+                document.getElementById("subtitle").innerHTML = data.subtitle; 
+              }
+            });
+          }
+        )
+        .catch(function(err) {
+          document.getElementById("title").innerHTML = '';
+          document.getElementById("subtitle").innerHTML = '';
+        });
+      }
+    </script>
+  </head>  
+  <body>
+    <div id="text-container">
+      <a class="billboard-link" id="text-anchor">
+        <p class="title" id="title">
+
+        </p>
+        <p class="subtitle" id="subtitle">
+
+        </p>
+<!--         <a href="https://meetbillboard.com">
+          <img class="footer" src="https://tiny-cdn.s3-us-west-1.amazonaws.com/icon.png" />
+        </a> -->
+      </a> 
+    </div>
+    <!--     IMAGE -->
+    <div id="image-container">
+      <a class="billboard-link" id="image-anchor">
+        <img id="image" class="billboard-container" src="https://i.imgur.com/XHFfvG8.png" />
+<!--         <a href="https://meetbillboard.com">
+          <img class="footer" src="https://tiny-cdn.s3-us-west-1.amazonaws.com/icon.png" />
+        </a> -->
+      </a>
+    </div>
+    <!--     TEXT -->
+  </body>
+</html>
