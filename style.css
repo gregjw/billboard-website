@@ -140,6 +140,10 @@ h1 {
   z-index: 0;
 }
 
+.subheader {
+  font-size: 47pt !important;
+}
+
 .underline {
   z-index: -1;
   position: absolute;
