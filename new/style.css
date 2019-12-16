@@ -53,18 +53,12 @@
 .other-header {
   font-family: 'Roobert', system-ui, helvetica, arial, sans-serif;
   padding: 2em;
-  height: 100vh;
+  height: 50vh;
   margin-bottom: 150px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-color: #FFC650;
-}
-
-.closer-mid {
-  margin-top: 10px;
-  width: 55%;
 }
 
 .mid {
@@ -82,12 +76,6 @@
   margin-top: 75px;
   margin-bottom: 50px;
   height: 300px;
-}
-
-.header-illustration {
-  margin-top: 25px;
-  margin-bottom: 50px;
-  height: 400px;
 }
 
 .beta-badge {
@@ -156,6 +144,8 @@ h1 {
   font-weight: 800;
   font-size: 57pt;
   color: #3b3b3b;
+/*    -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: #FFF; */
   padding-left: -10px;
   padding-bottom: 80px;
   width: 300px;
@@ -168,12 +158,7 @@ h1 {
 }
 
 .subheader {
-  font-size: 40pt !important;
-  text-align: center !important;
-  display: block !important;
-  color: #FFF;
-  margin-top: 250px !important;
-  width: 100%;
+  font-size: 47pt !important;
 }
 
 .underline {
@@ -333,11 +318,6 @@ input {
     display: none;
   }
   
-  .closer-mid {
-    width: 100%;
-    margin-top: 10px;
-  }
-  
   .mid {
     width: 100%;
     margin-top: 50px;
@@ -366,7 +346,7 @@ input {
   }
   
   img {
-    height: 250px !important;
+    width: 100%;
   }
   
 }
