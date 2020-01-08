@@ -81,7 +81,7 @@
     <script>
       var urlParams = new URLSearchParams(window.location.search);
       if(urlParams.has('key')){
-        fetch('https://api.tiny.markets/network/' + urlParams.get('key'))
+        fetch('https://api.meetbillboard.com/network/' + urlParams.get('key'))
         .then(
           function(response) {
             if (response.status !== 200) {
@@ -111,7 +111,7 @@
           document.getElementById("subtitle").innerHTML = '';
         });
       } else {
-        fetch('https://api.tiny.markets/network/hiwxNeKFc1')
+        fetch('https://api.meetbillboard.com/network/hiwxNeKFc1')
         .then(
           function(response) {
             if (response.status !== 200) {
