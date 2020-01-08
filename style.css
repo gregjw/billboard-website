@@ -178,13 +178,14 @@ h1 {
 
 .underline {
   z-index: -1;
-  position: absolute;
+  position: relative;
   margin-top: -8px;
+/*   border: 1px solid black; */
   display: block;
-  width: 308px;
+  width: 310px;
   height: 28px;
   margin-left: 2px;
-  background-color: #BF76FF;
+  background-color: #fff;
   cursor: pointer;
   transform-origin: 0% 100%;
   -webkit-animation: bummer 2s;
