@@ -154,7 +154,7 @@ label {
 
 h1 {
   font-weight: 800;
-  font-size: 57pt;
+  font-size: 5.5vw;
   color: #3b3b3b;
   padding-left: -10px;
   padding-bottom: 80px;
@@ -226,7 +226,7 @@ h1 {
 
 .pitch {
   font-weight: 800;
-  font-size: 36px;
+  font-size: 2vw;
   font-family: 'Roobert', system-ui, helvetica, arial, sans-serif;
   margin-top: 40px;
   color: #FFF;
