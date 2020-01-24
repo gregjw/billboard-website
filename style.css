@@ -25,6 +25,7 @@
   margin: 0;
   padding: 0;
   font-display: fallback;
+  text-decoration: none !important;
 }
 
 .chrome {
@@ -48,6 +49,7 @@
   -o-background-size: cover;
   background-size: cover;
   background-color: #FFC650;
+/*   background: linear-gradient(#D2DEEC, #F0F4F7); */
 }
 
 .other-header {
@@ -225,12 +227,13 @@ h1 {
 }
 
 .pitch {
-  font-weight: 800;
+  font-weight: 600;
   font-size: 2vw;
-  font-family: 'Roobert', system-ui, helvetica, arial, sans-serif;
-  margin-top: 40px;
+  font-family: 'Roobert Heavy', system-ui, helvetica, arial, sans-serif;
+  margin-top: 80px;
+  margin-bottom: 100px;
   color: #FFF;
-  width: 550px;
+/*   width: 550px; */
   border-radius: 5px;
 }
 
@@ -306,6 +309,28 @@ input {
   background-color: #000;
 }
 
+.buttoninverted {
+  outline: none;
+  font-family: 'Roobert', system-ui, helvetica, arial, sans-serif;
+  font-weight: bolder;
+  border: none;
+  border: 2px solid #FFF;
+  background-color: #FFF;
+  color: #3b3b3b;
+  font-size: 2vw;
+  padding: 1vw 1.5vw;
+  border-radius: 0.25vw;
+  cursor: pointer;
+  transition: .2s;
+  margin-left: 10px;
+}
+
+.buttoninverted:hover{
+  transition: .2s;
+  border: 2px solid #FFF;
+  background-color: #FFF;
+}
+
 .pulsate {
     -webkit-animation: pulsate 1.5s ease-out;
     -webkit-animation-iteration-count: infinite; 
@@ -375,9 +400,8 @@ input {
 
 .prompt {
   color: #3b3b3b;
-  font-size: 1vw;
-  font-weight: bolder;
-  font-family: 'Roobert', system-ui, sans-serif;
+  font-size: 20px;
+  font-family: 'Roobert Heavy', system-ui, sans-serif;
   margin-top: 55px;
   margin-bottom: 5px;
 }
